@@ -1,0 +1,92 @@
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* universal selector */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ============================
+    Common style
+================================*/
+.container{
+  max-width: 870px;
+  width: 100%;
+
+}
+
+/* -------------------
+      Header area design
+-----------------------*/
+.header{
+  background: #542eff;
+  /* padding: 15px 0; */
+  height: 94px;
+  display: flex;
+  justify-content: center;
+}
+.header .navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo{
+  display: flex;
+  align-items: center;
+}
+.header .logo img{
+  height: 51px;
+  width: auto;
+  margin-right: 10px;
+}
+.header .logo span{
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+}
+
+.header .navigation ul.menu{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header .navigation ul.menu li{
+  list-style-type: none;
+  transition: all 500ms;
+  position: relative;
+}
+.header .navigation ul.menu li:not(:last-child)::after{
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  inset: 100 0 0 0;
+  height: 3px;
+  width: 100%;
+  transform-origin: top right;
+  transform: scaleX(0);
+  background: #000;
+  transition: transform 500ms;
+}
+.header .navigation ul.menu li:hover::after{
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+.header .navigation ul.menu li a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+.header .navigation ul.menu li a img{
+  height: 51px;
+  width: 51px;
+}
+/* -------------------
+     !  Header area design
+-----------------------*/
+
+
