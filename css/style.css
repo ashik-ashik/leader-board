@@ -8,13 +8,15 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-
+body{
+  overflow: hidden;
+}
 /* ============================
     Common style
 ================================*/
 .container{
   max-width: 870px;
-  width: 100%;
+  width: 95%;
 
 }
 section{
@@ -203,8 +205,6 @@ main{
 }
 .latest-courses .all-courses{
   margin-top: 30px;
-}
-.latest-courses .all-courses{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 33px;
@@ -263,4 +263,42 @@ footer p{
   font-size: 15px;
   color: #fff;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 576px) {
+  
+  .all-players{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .all-players .player{
+    flex-direction: column;
+  }
+  .latest-courses .all-courses,
+  .top-blogs .all-blogs{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blog img{
+    width: 60% ;
+  }
+  .latest-courses .all-courses{
+    grid-row-gap: 30px;
+  }
+
+}
+
+@media only screen and (min-width:577px) and (max-width:768px) {
+  .navigation{
+    padding: 0 20px;
+  }
+  .all-players{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .latest-courses .all-courses,
+  .top-blogs .all-blogs{
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 30px;
+  }
+
+
 }
