@@ -17,6 +17,12 @@
   width: 100%;
 
 }
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 section .container{
   background: #fff;
   border-radius: 4px;
@@ -31,7 +37,7 @@ img{
 .header{
   background: #542eff;
   /* padding: 15px 0; */
-  height: 94px;
+  height: 75px;
   display: flex;
   justify-content: center;
 }
@@ -45,7 +51,7 @@ img{
   align-items: center;
 }
 .header .logo img{
-  height: 51px;
+  height: 40px;
   width: auto;
   margin-right: 10px;
 }
@@ -89,8 +95,8 @@ img{
   padding: 10px 20px;
 }
 .header .navigation ul.menu li a img{
-  height: 51px;
-  width: 51px;
+  height: 40px;
+  width: 40px;
 }
 /* -------------------
      !  Header area design
@@ -104,17 +110,10 @@ main{
   background: #E5E5E5;
   padding: 30px 0;
 }
-.top-area{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 .top-players{
   padding: 33px;
 }
-.top-blogs > h2,
-.top-players > h2{
+.section-title{
   font-size: 24px;
   color: #562EFF;
 }
@@ -166,9 +165,20 @@ main{
 .top-blogs .all-blogs .blog img{
   width: 117px;
 }
-.top-blogs .blog .blog-title{
+.top-blogs .blog .blog-title,
+.all-courses .course .course-title{
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
+}
+.all-courses .course .course-title a,
+.top-blogs .blog .blog-title a{
+  text-decoration: none;
+  color: #000;
+  transition: color 400ms;
+}
+.all-courses .course .course-title:hover a,
+  .top-blogs .blog .blog-title:hover a{
+  color: #FF4A60;
 }
 .top-blogs .blog .blog-author{
   font-size: 16px;
@@ -182,4 +192,75 @@ main{
    ! top blog area design
 -----------------------*/
 
+/* -------------------
+   latest courses area design
+-----------------------*/
+.latest-courses{
+  margin-top: 30px;
+}
+.latest-courses .container{
+  padding: 30px;
+}
+.latest-courses .all-courses{
+  margin-top: 30px;
+}
+.latest-courses .all-courses{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 33px;
+}
+.all-courses .course{
+  box-shadow: 1px 5px 15px 2px #00000010;
+  padding: 12px;
+  border-radius: 15px;
+}
+.all-courses .course .course-title{
+  margin-bottom: 15px;
+}
+.all-courses .course .course-title + p{
+  font-size: 14px;
+  color: #FF4A60;
+  margin: 10px 0;
+}
+.all-courses .course-info{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.all-courses .course .rattings [class*="fa-star"]{
+  color: #FFC014;
+  font-size: 13px;
+}
+.all-courses .course .rattings span{
+  color: #A2A2A2;
+  font-size: 14px;
+}
+.all-courses .course-duration{
+  background: #ff4a5f3d;
+  display: inline-block;
+  padding: 1px 10px;
+  border-radius: 20px;
+}
+.all-courses .course-duration .fa-clock,
+.all-courses .course-duration span{
+  font-size: 13px;
+  color: #FF4A60;
+}
+/* -------------------
+   ! latest courses area design
+-----------------------*/
 
+
+/* footer */
+footer{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+footer p{
+  font-size: 15px;
+  color: #fff;
+  font-weight: 600;
+}
